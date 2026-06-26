@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Event</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f7fc;
+            padding:40px;
+        }
+
+        .container{
+            width:60%;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:25px;
+            color:#0f172a;
+        }
+
+        label{
+            display:block;
+            margin-top:15px;
+            margin-bottom:6px;
+            font-weight:bold;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:6px;
+            font-size:16px;
+        }
+
+        textarea{
+            resize:none;
+            height:100px;
+        }
+
+        button{
+            margin-top:20px;
+            width:100%;
+            padding:14px;
+            border:none;
+            background:#2563eb;
+            color:white;
+            font-size:16px;
+            border-radius:6px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#1d4ed8;
+        }
+
+        .back{
+            display:inline-block;
+            margin-bottom:20px;
+            text-decoration:none;
+            color:#2563eb;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <a href="/admin" class="back">← Back to Dashboard</a>
+
+    <h1>Edit Event Details</h1>
+
+    <form method="POST" action="/edit-event">
+
+        <label>Event Title</label>
+        <input type="text" name="title" value="{{ event[1] }}" required>
+
+        <label>Subtitle / Description</label>
+        <textarea name="subtitle" required>{{ event[2] }}</textarea>
+
+        <label>Event Date</label>
+        <input type="text" name="event_date" value="{{ event[3] }}" required>
+
+        <label>Event Time</label>
+        <input type="text" name="event_time" value="{{ event[4] }}" required>
+
+        <label>Venue</label>
+        <input type="text" name="venue" value="{{ event[5] }}" required>
+
+        <button type="submit">Save Changes</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

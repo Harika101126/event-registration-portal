@@ -1,0 +1,161 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:15px 40px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    height:70vh;
+    background:linear-gradient(135deg,#2563eb,#1e293b);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:20px;
+}
+
+.btn{
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.countdown{
+    background:white;
+    padding:30px;
+    text-align:center;
+}
+
+#timer{
+    font-size:30px;
+    font-weight:bold;
+    color:#2563eb;
+    margin-top:10px;
+}
+
+.about{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.about h2{
+    margin-bottom:20px;
+}
+
+.about p{
+    margin:10px 0;
+    font-size:20px;
+}
+
+.register{
+    padding:50px 20px;
+}
+
+.register h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+input,
+select{
+    margin:10px 0;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+button{
+    margin-top:10px;
+    padding:15px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+#message{
+    text-align:center;
+    margin-top:20px;
+    color:green;
+    font-size:24px;
+    font-weight:bold;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+    #timer{
+        font-size:22px;
+    }
+}
